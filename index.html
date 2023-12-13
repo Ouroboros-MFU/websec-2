@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Расписание</title>
+</head>
+<body>
+    <div class="title"> Расписание </div>
+    <div class="search">
+        <input type="text" id="search-teacher" placeholder="Поиск преподавателя">
+        <button id="search-teacher-button" onclick="searchTeacher()" >Поиск</button>
+        <input type="text" id="search-group" placeholder="Поиск группы">
+        <button id="search-group-button" onclick="searchGroup()" >Поиск</button>
+    </div>
+    <div class="schedule-container">
+        <div class="header">
+            <div>
+                <button id="previous" onclick="changeWeek(false)">
+                    Предыдущая неделя
+                </button>
+            </div>
+            <div>
+                <select id="select-teacher">
+                    <option> Преподаватель </option>
+                </select>
+                
+                <select id="select-group">
+                    <option> Группа </option>
+                </select>
+                <p class="selected">6412-100503D</p>
+            </div>
+            <div>
+                <button id="next" onclick="changeWeek(true)">
+                    Следующая неделя
+                </button>
+            </div>
+        </div>
+        <table id="schedule"></table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
